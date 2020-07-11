@@ -18,7 +18,7 @@ body {
     position: relative
 }
 
-.wrapper .sidebar {
+.sidebar {
     position: fixed;
     width: 20%;
     height: 100%;
@@ -37,6 +37,7 @@ body {
     font-size: 2em;
     padding: 4px;
     color: #fff;
+    display: none;
 }
 
 .wrapper .sidebar .sidebar-header h2 {
@@ -56,20 +57,34 @@ body {
     display: block;
 }
 
-.wrapper .sidebar ul li:hover {
-    color: #fff;
+.wrapper .sidebar ul li a:hover {
+    color:orangered;
 }
 
-.wrapper .main {
+.main {
     width: 80%;
     margin-left: 20%;
 }
 
 .wrapper .main .header {
-    padding: 20px;
+    text-align: center;
+    padding: 40px 20px;
     background: #fff;
     color: #717171;
     border-bottom: 1px solid #e0e4e8;
+    margin-bottom: 0px;
+}
+
+.wrapper .main .openbtn {
+    top: 0;
+    position: fixed;
+    font-size: 1.2em;
+    padding: 4px;
+    color: #000;
+    border: 7px solid #0c0530;
+    border-style: ridge;
+    cursor: pointer;
+    display: none;
 }
 
 .wrapper .main .description {
@@ -80,4 +95,144 @@ body {
 
 .wrapper .main .description div {
     margin-bottom: 20px;
+}
+
+#space {
+    height: 20px;
+    background: #0c0530;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .sidebar {
+        width: 25%;
+        padding: 60px 0;
+    }
+
+    .main {
+        width: 75%;
+        margin-left: 25%;
+    }
+
+    .wrapper .sidebar .collapsible .closebtn {
+        right: 76%;
+        top: 1%;
+        font-size: 2.4em;
+        padding: 6px;
+    }
+
+    .wrapper .sidebar ul li {
+        padding: 25px;
+    }
+
+    .wrapper .sidebar ul li a{
+        color:#bdb8d7;
+        font-size: 1em;
+    }
+
+    .wrapper .main .header {
+        padding: 60px 40px;
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
+    .sidebar {
+        width: 50%;
+        padding: 60px 0;
+        z-index: 10;
+        display: none;
+    }
+
+    .main {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .wrapper .sidebar .sidebar-header h2 {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .wrapper .sidebar .collapsible .closebtn {
+        right: 51%;
+        top: 1%;
+        font-size: 2.3em;
+        padding: 3px;
+    }
+
+    .wrapper .sidebar ul li {
+        padding: 15px;
+    }
+
+    .wrapper .sidebar ul li a{
+        color:#bdb8d7;
+        font-size: 0.8em;
+    }
+
+    .wrapper .main .header {
+        padding: 45px 25px;
+        font-size: 1em;
+    }
+
+    .wrapper .main .openbtn {
+        font-size: 1em;
+        padding: 2px;
+        display: block;
+    }
+
+    .wrapper .sidebar .collapsible .closebtn {
+        display: block;
+    }
+    
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+    .sidebar {
+        width: 60%;
+        padding: 50px 0;
+        z-index: 10;
+        display: none;
+    }
+
+    .main {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .wrapper .sidebar .sidebar-header h2 {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .wrapper .sidebar .collapsible .closebtn {
+        right: 41%;
+        top: 1%;
+        font-size: 2em;
+        padding: 2px;
+    }
+
+    .wrapper .sidebar ul li {
+        padding: 12px;
+    }
+
+    .wrapper .sidebar ul li a{
+        color:#bdb8d7;
+        font-size: 0.8em;
+    }
+
+    .wrapper .main .header {
+        padding: 45px 25px;
+        font-size: 1em;
+    }
+
+    .wrapper .main .openbtn {
+        font-size: 1em;
+        padding: 2px;
+        display: block;
+    }
+
+    .wrapper .sidebar .collapsible .closebtn {
+        display: block;
+    }
+    
 }
