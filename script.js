@@ -8,9 +8,7 @@ function openMenu() {
 function closeMenu() {
     if (media.matches) { 
         document.querySelector(".sidebar").style.display = "none";
-    } else {
-        document.querySelector(".sidebar").style.display = "block";
-    }
+    } 
 }
 
 document.querySelector(".openbtn").addEventListener("click", openMenu);
