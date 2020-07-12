@@ -20,29 +20,187 @@
                     <h2>Technical Documentation</h2>
                 </div>              
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">The First topic</a></li>
-                    <li><a href="#">The Second topic</a></li>
-                    <li><a href="#">The Third topic</a></li>
-                    <li><a href="#">The Fourth topic</a></li>
-                    <li><a href="#">The Fifth topic</a></li>
-                    <li><a href="#">The Sixth topic</a></li>
-                    <li><a href="#">The Seventh topic</a></li>
-                    <li><a href="#">The Eighth topic</a></li>
-                    <li><a href="#">The Nineth topic</a></li>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#first-topic">Create your Office 365 tenant account</a></li>
+                    <li><a href="#second-topic">Secure and configure your network</a></li>
+                    <li><a href="#third-topic">Sync your active directory</a></li>
+                    <li><a href="#fourth-topic">Sync your SIS using School Data Sync (SDS)</a></li>
+                    <li><a href="#fifth-topic">License Users</a></li>
+                    <li><a href="#">&nbsp;</a></li>
+                    
                 </ul>
             </nav>
             <div class="main">
                 <span class="openbtn">☰ Menu</span>
                 <div class="header">
-                    <h1>Group C's Technical Documentation</h1>
+                    <h1>Microsoft 365 Technical Documentation</h1>
                 </div>
                 <div id="space"></div>
                 <div class="description">
-                    <div>
-                        <h2>Introduction</h2>
-                        <article>Lorem ipsum dolor</article>
-                    </div>
+                    <article id="overview">
+                        <h3>Overview</h3>
+                        <p>Microsoft 365 Education empowers educators to unlock creativity, promote teamwork, and provide a simple and safe experience in a single, affordable solution built for education. The purpose of this guide and the links below is to help IT administrators deploy Microsoft Education offerings from start to finish, in the easiest and least costly way. We have divided topics into phases and steps to help you through the deployment continuum.</p>
+                        <h4>What is M365 Education?</h4>
+                        <p>Microsoft 365 Education consists of:</p>  
+                        <ol>
+                            <li>
+                                <b>Office 365 Education:</b>
+                                <span>&nbsp;Includes both Office 365 ProPlus, the latest Office apps for your PC and Mac (such as Word, Excel, PowerPoint, Outlook, and others), and a full suite of online services for email, file storage and collaboration, meetings, and more. Click here to see features in each O365 education plan</span>
+                            </li>
+                            <li>
+                                <b>Windows 10 Education:</b>
+                                <span>&nbsp;Addresses the needs of both large and small schools, providing users with the most productive and secure version of Windows and IT professionals with comprehensive deployment, device, and app management.</span>
+                            </li>
+                            <li>
+                                <b>Management & Security:</b>
+                                <span>&nbsp;Includes Intune for Education and School Data Sync, among other security features.</span>
+                            </li>
+                        </ol>
+                        <h4>Microsoft 365 Education deployment guide</h4>
+                        <p>The Microsoft 365 Education deployment guide steps you through the correct and required configuration of Microsoft 365 Education products and features. Deploy the foundation infrastructure for built-in security and integration for simplified management, which makes it easier to ensure your client software is updated with the latest productivity and security enhancements. The foundation infrastructure is organized as a series of numbered phases that build upon each other and towards an environment that enables Microsoft 365 Education workloads and scenarios. For education customers, the first step is Cloud deployment, which includes Networking and Identity. These steps will enable you to deploy education workloads and scenarios, including Teams for Education, Exchange, and SharePoint and OneDrive.</p>
+                        <p>We highly recommend you upgrade to Windows 10 if you haven’t already, use the best version of Office365, Office365 ProPlus, and manage and secure your organization’s devices with Intune for Education.</p>
+                        <p>Visit the Microsoft Store for Education to download the latest and greatest education apps, and deploy Minecraft: Education Edition to keep your students interested and engaged.</p>
+                        <p>We have divided the guide into four phases and associated steps. These steps are meant to guide you through the most common deployment strategies. You can deploy phases or the portions of phases of this infrastructure in any order-- one after another or in parallel to integrate with your current infrastructure, fit your IT plans, and meet your schools’ needs.</p>
+                        <p>The phases are:</p>
+                        <ol>
+                            <li>Cloud deployment</li>
+                            <li>Device management</li>
+                            <li>APs management</li>
+                            <li>Complete your deployment</li>
+                        </ol>
+                    </article>
+                    <br>
+                    <article id="first-topic">
+                        <h3>Step 1: Create your Office 365 tenant account.</h3>
+                        <p>Follow these steps to set up an Office 365 for Education verified tenant if you dont already have one set up.</p>
+                        <ol>
+                            <li>Navigate to the Office 365 Education Plans page.</li>
+                            <li>Click the green Get Started for Free button.</li>
+                            <li>Click Create a New Account.</li>
+                            <li>
+                                Enter all info requested in the wizard
+                                <ul>
+                                    <li>Country or Region</li>
+                                    <li>First Name</li>
+                                    <li>School email address</li>
+                                    <li>School phone address</li>
+                                    <li>School name</li>
+                                    <li>School size</li>
+                                </ul>
+                            </li>
+                            <li>Click "Next"</li>
+                            <li>
+                                Create your Global Admin account. Enter all requested information.
+                                <ul>
+                                    <li>Username</li>
+                                    <li>Domain name</li>
+                                    <li>Password</li>
+                                </ul>
+                            </li>
+                            <li>Record the username and password for your Admin account, and then click "Create my account".</li>
+                            <li>Enter our phone number for an access code and verify you’re not a robot.</li>
+                            <li>Click "You're ready to go".</li>
+                            <li>Click "I'll verify later".</li>
+                            <li>Click "Yes" on the confirmation prompt.</li>
+                            <li>Your Office 365 EDU tenant account is now created!!</li>
+                        </ol>
+
+                        <h4>Add Domains</h4>
+                        <p>Once you’ve created your tenant, add each of the domains for your organization. To do this, follow these instructions for each domain you want to add. You don't NOT need to a tenant account for each domain. You can have a single tenant account with multiple domains.</p>
+                        <p><b>Recommendation - </b>Add a small number of domains, if possible. For education, enabling a single domain for teachers and a single domain for students works well. Each domain added is intended to be associated to the UserPrincipalName and Email Address of the users in your directory. If you have domains from an on-premise Active Directory that are not being used, there is no need to add them to your Office 365 tenant.</p>
+                        <p><b>Next step:</b> Once you have created your Office 365 tenant account and added domains, please proceed to Step 2 to Secure and Configure Your Network.</p>
+                    </article>
+                    <br>
+                    <article id="second-topic">
+                        <h3>Step 2: Secure and configure your network</h3>
+                        <p>Some of the most common Office 365 performance issues are related to network configuration. Assessing your network configuration and applying network principals and best practices is a key step in ensuring the best possible Office 365 user experience.</p>
+                        <h4>Review Network Planning, Optimization, and Best Practices</h4>
+                        <p>The topic Office 365 network connectivity overview is a good place to start to understand the basic principles of Office 365 networking. Then, read Office 365 Network Connectivity Principles to understand how to optimize network performance.</p>
+                        <h4>Configure Connectivity to Microsoft IPs and URLs</h4>
+                        <p>To move to Microsoft 365 Education, you need to enable network connectivity to the Microsoft cloud and services. Ensure that you configure your firewalls and network devices for connectivity to the IPs and URLs defined in the topic Managing Office 365 endpoints.</p>
+                        <p>Next step: Once you have reviewed your network configuration and ensured that you are following the Office 365 Network Connectivity Principles, please proceed to Step 3 to "Sync Your Active Directory".</p>
+                    </article>
+                    <br>
+                    <article id="third-topic">
+                        <h3>Step 3: Sync your active directory</h3>
+                        <p>This article is meant for customers who intend to integrate an on-premise active directory with Office 365. If you do not need to integrate an on-premise directory, and intend to provision cloud-only identities, you can skip this step, and proceed to Sync your SIS with School Data Sync.</p>
+                        <p>There are three ways to move your identities to Microsoft 365 Education.</p>
+                        <ol>
+                            <li>
+                                <b>AAD Connect with Password Hash Sync:</b><em>Recommended Path</em>
+                                <p>The most efficient path to move from an on-premise active directory is using AAD Connect with Password Hash Sync for authentication. This path is easier and cheaper to deploy because you can use Azure AD Connect Express Settings. Express Settings is the default option and is used for the most commonly deployed scenarios. You will only have to manage one server and this path will give you seamless single sign-on, and cloud multi-factor authentication.</p>
+                            </li>
+                            <li>
+                                <b>AAD Connect with Passthrough Authentication</b>
+                                <p>If you need to manage password authentication requests from your own on-premise active directory, you will still use AAD Connect, but you will need to use the Passthrough Authentication Option instead of Password Hash Sync. Azure Active Directory (Azure AD) Pass-through Authentication enables users to sign in to both on-premises and cloud-based applications using the same passwords. When users sign in using Azure AD, this feature validates users' passwords directly against your on-premises Active Directory. This path is for organizations wanting to enforce their on-premises Active Directory security and password policies.</p>
+                            </li>
+                            <li>
+                                <b>Active Directory Federated Services (ADFS)</b>
+                                <p>If you need to have on-premise managed Multi-Factor Authentication (MFA), you will need to use Active Directory Federated Services (ADFS). When you choose this authentication method, Azure AD hands off the authentication process to the on-premises Active Directory Federation Services (AD FS) to validate the user’s password. We do not recommend this option unless you need federated single sign-on and on-premise password management. This path is more difficult and expensive, requires the management of multiple servers, and is only relevant for districts with complex security set-up and requirements.</p>
+                            </li>
+                        </ol>
+                        <p>Next step: After you have completed syncing your active directory, please proceed to Step 4 to "Sync your SIS with School Data Sync".</p>
+                    </article>
+                    <br>
+                    <article id="fourth-topic">
+                        <h3>Step 4: Sync your SIS using School Data Sync (SDS)</h3>
+                        <p>School Data Sync (SDS) is a free service in Office 365 for Education that reads the school and roster data from a school's Student Information System (SIS). It creates Office 365 Groups for Exchange Online and SharePoint Online, class teams for Microsoft Teams and OneNote Class notebooks, school groups for Intune for Education, and rostering and SSO integration for many other third party applications. Key app integration scenarios that SDS enables include:</p>
+                        <ul>
+                            <li>
+                                <b>Teams for Education</b> – SDS enables automatic Class Team creation based on SDS-created O365 Groups and Rostering.
+                            </li>
+                            <li>
+                                <b>OneNote Class Notebooks</b> – SDS enables automated OneNote Class Notebook provisioning within Teams for Education. When enabled, each Class Notebook will have sections created and permissions set based on SDS class rostering data imported during sync.
+                            </li>
+                            <li>
+                                <b>Exchange Online and SharePoint Online</b>–SDS creates Office 365 Groups for online messaging, file sharing, and collaboration.
+                            </li>
+                            <li>
+                                <b>Intune for Education</b>– SDS creates schools-based Security Groups for granular device policy and can also provide automated bulk licensing of Intune for Education for all students and teachers synced.
+                            </li>
+                            <li>
+                                <b>3rd Party Apps</b>– SDS integrates with numerous apps within the Microsoft Store and enables Rostering and Single Sign-On (SSO) app integration.
+                            </li>
+                        </ul>
+                        <p>Once you have identity integration with On-Premise AD, or you’re ready to create cloud-only Identity, your next step is to enable School Data Sync (SDS). SDS can be used to either create new cloud-only identities or evolve your existing identities for all users. Users will be evolved to "students" and "teachers", and associated to "grade", "school," and other EDU specific attributes and associations.</p>
+                        <p>SDS will also synchronize and create all of your classes in Office 365, for use as Office 365 Groups and Microsoft Class Teams. SDS will add teachers as class owners, and students as class members, based on the roster data stored in the SIS. Click here for the benefits of using SDS for IT Admins, Teachers, Students, SIS Vendors, App Vendors, and SIs.</p>
+                        <h4>Deploying School Data Sync</h4>
+                        <p>SDS offers two methods for directory sync and creation.</p>
+                        <ol>
+                            <li>Sync from SIS using an API – Seamless API integration with several top SISes including PowerSchool, Infinite Campus, Classlink, Capita SIMS, and several others.</li>
+                            <li>Sync from CSV Files – Any SIS which can export data to one of the three supported CSV formats (SDS CSV, OneRoster, and Clever format), can be synced via SDS.</li>
+                        </ol>
+                        <h5>School Data Sync requirements</h5>
+                        <ol>
+                            <li>An Office 365 Education tenant account (from Step 1)</li>
+                            <li>Global Administrator Permissions (from Step 1)</li>
+                        </ol>
+                        <p>Before deploying SDS, please go to the SDS Settings page to configure your global deployment settings.</p>
+                        <p>Next step: Once you have synced your SIS using SDS, please proceed to Step 5 to "License users".</p>
+                    </article>
+                    <br>
+                    <article id="fifth-topic">
+                        <h3>Step 5: License Users</h3>
+                        <p>Licensing user accounts in Office 365 is important, because users can't use any Office 365 services until their accounts have been licensed. There are three ways to license users:</p>
+                        <ol>
+                            <li>
+                                <b>Group-based licensing: </b><em> Recommended Path</em>
+                                <p>Until now, licenses could only be assigned at the individual user level, which can make large-scale management difficult. With group-based licensing, administrators no longer have to write a complex PowerShell script that makes individual calls to the cloud service when a user joins or leaves a school. Instead, you can assign one or more product licenses to a group. Azure AD ensures that the licenses are assigned to all members of the group. Any new members who join the group are assigned the appropriate licenses. When they leave the group, those licenses are removed. This licensing management eliminates the need for automating license management via PowerShell to reflect changes in the organization and departmental structure on a per-user basis. To use group-based licensing, you must have one of the following licenses:</p>
+                                <ul>
+                                    <li>Paid or trial subscription for Azure AD Basic</li>
+                                    <li>Paid or trial edition of Office 365 Enterprise E3 or Office 365 A3 and above</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Office 365 Powershell</b>
+                                <p>If you have more than 50 users, and do not have one of the licenses listed in option 1 above, you will have to use Office 365 PowerShell to efficiently assign licenses to unlicensed accounts, especially multiple accounts. Here are directions on how to license users with Powershell.</p>
+                            </li>
+                            <li>
+                                <b>Management Portals</b>
+                                <p>If you have less than 50 users, you can use the "Office 365 or Azure management portal" to manage your licensing needs.</p>
+                            </li>
+                        </ol>
+                    </article>
                 </div>
             </div>
         </div>
