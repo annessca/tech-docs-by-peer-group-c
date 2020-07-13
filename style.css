@@ -21,7 +21,7 @@ body {
     position: relative
 }
 
-.sidebar {
+#sidebar {
     position: fixed;
     width: 20%;
     height: 100%;
@@ -30,11 +30,11 @@ body {
     list-style: none;
 }
 
-.wrapper .sidebar .sidebar-header {
+.wrapper #sidebar .sidebar-header {
     color: #fff;
 }
 
-.wrapper .sidebar .collapsible .closebtn {
+.wrapper #sidebar .collapsible .closebtn {
     right: 81%;
     top: 1%;
     position: fixed;
@@ -44,24 +44,24 @@ body {
     display: none;
 }
 
-.wrapper .sidebar .sidebar-header h2 {
+.wrapper #sidebar .sidebar-header h2 {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 30px;
 }
 
-.wrapper .sidebar ul li {
+.wrapper #sidebar ul li {
     padding: 15px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     border-top: 1px solid rgba(225, 225, 225, 0.05);
 }
 
-.wrapper .sidebar ul li a{
+.wrapper #sidebar ul li a{
     color:#bdb8d7;
     display: block;
 }
 
-.wrapper .sidebar ul li a:hover {
+.wrapper #sidebar ul li a:hover {
     color:orangered;
 }
 
@@ -108,7 +108,7 @@ body {
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
-    .sidebar {
+    #sidebar {
         width: 25%;
         padding: 60px 0;
     }
@@ -118,18 +118,18 @@ body {
         margin-left: 25%;
     }
 
-    .wrapper .sidebar .collapsible .closebtn {
+    .wrapper #sidebar .collapsible .closebtn {
         right: 76%;
         top: 1%;
         font-size: 2.4em;
         padding: 6px;
     }
 
-    .wrapper .sidebar ul li {
+    .wrapper #sidebar ul li {
         padding: 25px;
     }
 
-    .wrapper .sidebar ul li a{
+    .wrapper #sidebar ul li a{
         color:#bdb8d7;
         font-size: 1em;
     }
@@ -141,11 +141,15 @@ body {
 }
 
 @media (min-width: 400px) and (max-width: 1000px) {
-    .sidebar {
+    #sidebar {
+        display: none;
+    }
+
+    #sidebar.display {
         width: 50%;
         padding: 60px 0;
         z-index: 10;
-        display: none;
+        display: block;
     }
 
     .main {
@@ -153,23 +157,23 @@ body {
         margin-left: 0%;
     }
 
-    .wrapper .sidebar .sidebar-header h2 {
+    .wrapper #sidebar .sidebar-header h2 {
         font-size: 1em;
         margin-bottom: 30px;
     }
 
-    .wrapper .sidebar .collapsible .closebtn {
+    .wrapper #sidebar .collapsible .closebtn {
         right: 51%;
         top: 1%;
         font-size: 2.3em;
         padding: 3px;
     }
 
-    .wrapper .sidebar ul li {
+    .wrapper #sidebar ul li {
         padding: 15px;
     }
 
-    .wrapper .sidebar ul li a{
+    .wrapper #sidebar ul li a{
         color:#bdb8d7;
         font-size: 0.8em;
     }
@@ -185,18 +189,22 @@ body {
         display: block;
     }
 
-    .wrapper .sidebar .collapsible .closebtn {
+    .wrapper #sidebar .collapsible .closebtn {
         display: block;
     }
     
 }
 
 @media (min-width: 300px) and (max-width: 399px) {
-    .sidebar {
+    #sidebar {
+        display: none;
+    }
+
+    #sidebar.display {
         width: 60%;
         padding: 50px 0;
         z-index: 10;
-        display: none;
+        display: block;
     }
 
     .main {
@@ -204,23 +212,23 @@ body {
         margin-left: 0%;
     }
 
-    .wrapper .sidebar .sidebar-header h2 {
+    .wrapper #sidebar .sidebar-header h2 {
         font-size: 1em;
         margin-bottom: 30px;
     }
 
-    .wrapper .sidebar .collapsible .closebtn {
+    .wrapper #sidebar .collapsible .closebtn {
         right: 41%;
         top: 1%;
         font-size: 2em;
         padding: 2px;
     }
 
-    .wrapper .sidebar ul li {
+    .wrapper #sidebar ul li {
         padding: 12px;
     }
 
-    .wrapper .sidebar ul li a{
+    .wrapper #sidebar ul li a{
         color:#bdb8d7;
         font-size: 0.8em;
     }
@@ -236,7 +244,7 @@ body {
         display: block;
     }
 
-    .wrapper .sidebar .collapsible .closebtn {
+    .wrapper #sidebar .collapsible .closebtn {
         display: block;
     }
     
